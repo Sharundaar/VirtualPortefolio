@@ -1,1 +1,12 @@
 /Library
+/*.csproj
+/Assets/Editor.meta
+/Assets/Editor/CrossPlatformInput.meta
+/Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs
+/Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs.meta
+/Assets/Standard Assets/
+/*.sln
+/*.suo
+/obj/Debug/*.cache
+/obj/Debug/*.force
+/Assets/Standard Assets.meta
