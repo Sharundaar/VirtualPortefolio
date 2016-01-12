@@ -3,12 +3,12 @@ using System.Collections;
 
 public class Asteroid : MonoBehaviour {
 
-    Rigidbody rigidbody;
+    Rigidbody m_rigidbody;
     public Vector3 velocity = Vector3.zero;
 
 	// Use this for initialization
 	void Start () {
-        rigidbody = GetComponent<Rigidbody>();
+        m_rigidbody = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame

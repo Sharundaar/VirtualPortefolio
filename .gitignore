@@ -10,3 +10,4 @@
 /obj/Debug/*.cache
 /obj/Debug/*.force
 /Assets/Standard Assets.meta
+/Assets/Prefabs/*.meta
