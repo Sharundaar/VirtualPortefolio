@@ -7,12 +7,19 @@ public class MovieController : MonoBehaviour {
 
     void Start()
     {
-        Movie.loop = true;
+        if(Movie == null)
+        {
+            GetComponent<Collider>().enabled = false;
+        }
+        else
+        {
+            Movie.loop = true;
+        }
     }
 
 	void OnTriggerEnter(Collider collider)
     {
-        if(collider.tag == "Player")
+        if (collider.tag == "Player")
             Movie.Play();
     }
 
