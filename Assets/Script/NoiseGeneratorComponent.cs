@@ -40,6 +40,7 @@ public class NoiseGeneratorComponent : MonoBehaviour {
         Debug.Log("Thread running...");
         m_NoiseGenerator = new PerlinNoiseGenerator(2048, 2048);
         m_NoiseGenerator.GenerateHeightmap(m_octave, m_persistence);
+        m_NoiseGenerator.ForceZeroBorder(8, 1.1f);
     }
 
     void ThreadFinished()

@@ -190,6 +190,29 @@ public class PerlinNoiseGenerator
         ComputeMinMax();
     }
 
+    public void ForceZeroBorder(float _pow, float _offset)
+    {
+        float halfw = m_width / 2.0f;
+        float halfh = m_height / 2.0f;
+
+        for(int i=0; i < m_heightmap.Length; ++i)
+        {
+            float rx = (i % m_width);
+            float ry = (i / m_width);
+
+            rx = (rx - halfw) / halfw;
+            ry = (ry - halfh) / halfh;
+
+            rx *= _offset;
+            ry *= _offset;
+
+            float val = 1.0f - Mathf.Clamp01(Mathf.Pow(rx, _pow) + Mathf.Pow(ry, _pow));
+            m_heightmap[i] = (m_heightmap[i] - Min) / (Max - Min) * val;
+        }
+
+        ComputeMinMax();
+    }
+
     public Texture2D DumpHeightmapToTexture()
     {
         Texture2D texture = new Texture2D(m_width, m_height);
